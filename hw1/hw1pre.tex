@@ -1,0 +1,66 @@
+\documentclass{ctexbeamer}
+\usetheme[maxplus,light]{sjtubeamer}
+
+\def\subsection#1{
+    \par\framebreak
+    {
+        \bfseries \usebeamercolor[fg]{subtitle} #1
+    }
+}
+\def\section#1{
+    \par\framebreak
+    {
+        \bfseries \large \usebeamercolor[fg]{title} #1
+    }
+    \par
+}
+
+% similar to part pages
+
+\def\part#1{
+    \framebreak
+    \vspace*{0.3\paperheight}
+    \begin{center}
+        \Large\usebeamercolor[fg]{title} #1 
+    \end{center}
+    \vspace*{0.3\paperheight}
+    \newpage
+}
+\def\chapter#1{
+    \framebreak
+    \vspace*{0.3\paperheight}
+    \begin{center}
+        \Large\usebeamercolor[fg]{title} #1 
+    \end{center}
+    \vspace*{0.3\paperheight}
+    \newpage
+}
+
+%%%%%%%%%%%%%%%%%%%%%%
+
+% beamer global settings
+\usefonttheme{professionalfonts}
+\setbeamertemplate{frametitle continuation}[from second][(\uppercase\expandafter{\romannumeral\insertcontinuationcount})]
+
+% paragraph
+\setlength{\parskip}{0.5em}
+% \setlength{\parindent}{2em}
+
+\def\marginpar#1{#1}
+
+\graphicspath{{img/}}
+
+\usepackage{gbt7714}
+
+\begin{document}
+    \title{COVID Insights}
+    \author{李子龙}
+    \institute[Copyright \copyright{} 2020 Microsoft Corporation.]{}
+    \maketitle
+
+    \begin{frame}[allowframebreaks]
+        \input{hw1content}
+    \end{frame}
+
+    \makebottom
+\end{document}

@@ -18,3 +18,8 @@ cache/
 ref/
 
 *.pdf
+*.bcf
+*.nav
+*.out
+*.run.xml
+*.snm

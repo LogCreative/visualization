@@ -1,0 +1,220 @@
+body, html{
+    padding: 0px;
+    margin: 0px;
+}
+
+h1, h2{
+    text-align: center;
+    padding: 20px;
+}
+h1 #nameen {
+    font-size: large
+}
+
+h1 {
+    background-color: darkblue;
+    color: white;
+    margin: 0px;
+}
+
+h2{
+    font-weight: normal;
+    font-size: medium;
+    font-style: italic;
+    padding-bottom: 10px;
+}
+
+#resume {
+    line-height: 130%;
+    padding: 20px;
+}
+
+.year{
+    text-align: right;
+    font-style: italic;
+    color: gray;
+}
+
+.itemname{
+    font-weight: bold;
+    display: inline-block;
+}
+
+#profileimage {
+    float: right;
+    margin: 10px;
+}
+
+#resume a {
+    text-decoration: none;
+}
+#resume a:hover {
+    /* color: darkblue; */
+    font-weight: bold;
+    text-decoration: underline;
+}
+/* #resume .block:hover a, #resume li:hover {
+    color: darkblue;
+} */
+#resume .block:hover a {
+    text-decoration: underline;
+    /* text-decoration-color: darkblue; */
+}
+#resume .block:hover .year{
+    color: darkcyan;
+}
+
+/* self-adapted layout */
+
+@media(min-width: 1000px) {
+    .subblock{
+        width: 47%;
+        display: inline-block;
+    }
+}
+
+.block {
+    border: 1.5px solid gray;
+    border-radius: 10px;
+    margin: 15px 0px;
+    padding: 0px;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
+}
+.block:hover {
+    background-color: whitesmoke;
+    box-shadow: 
+        inset 0 -3em 3em rgba(0, 0, 0, 0.1),
+        0 0  0 1px rgb(128, 128, 128),
+        0.3em 0.3em 1em rgba(0,0,128,0.3);
+}
+
+h3 {
+    /* A negative margin is needed for compensation. */
+    margin: -1px -0.5px 15px -0.5px;
+    padding: 25px 5px 5px 5px;
+    border: solid gray;
+    border-width: 0px 0px 1.5px 0px;
+    border-radius: 10px 10px 0px 0px;
+    text-align: center;
+    
+    transition: cubic-bezier(0.215, 0.610, 0.355, 1) 0.5s;
+    background-color: gray;
+    color: white;
+}
+.block:hover > h3 {
+    background-color: darkblue;
+}
+/* .block:hover .itemname{
+    color: darkblue;
+} */
+
+.block:hover,
+.block:hover > h3{
+    border-color: blue;
+}
+
+h4 {
+    color: darkgray;
+    margin-top: 0px;
+    border: 1.5px darkgray solid;
+    text-align: center;
+    padding: 3px;
+    border-radius: 5px;
+}
+.block:hover h4 {
+    color: darkcyan;
+    border-color: darkcyan;
+}
+.subblock:hover > h4 {
+    color: white;
+    border-color: darkslateblue;
+}
+.subblock, .block > ul{
+    margin: 10px;
+}
+
+.subblock ul li,
+.subblock ol li{
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
+    border: 1px solid transparent;
+    background-color: transparent;
+    border-radius: 5px;
+}
+.subblock ul li:hover,
+.subblock ol li:hover {
+    border-color: rgba(0, 139, 139, 0.15);
+    background-color: rgba(0, 139, 139, 0.1);
+}
+.subblock ul li:hover b,
+.subblock ol li:hover .itemname,
+.subblock ul li:hover .itemname,
+.block ul li:hover .itemname {
+    color: white;
+}
+.subblock ul li:hover::before{
+    color: darkblue;
+}
+
+h4 {
+    background-image: linear-gradient(to right, transparent 50%, darkslateblue 50%);
+}
+.subblock ul li b,
+.subblock ol li .itemname,
+.block ul li .itemname {
+    background-image: linear-gradient(to right, transparent 50%, rgb(0, 0, 97) 50%);
+}
+
+h4,
+.subblock ul li b,
+.subblock ol li .itemname,
+.block ul li .itemname {
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
+    background-size: 200% auto;
+    -webkit-background-size: 200% auto;
+    -moz-background-size: 200% auto;
+    background-position: 0% 0;
+    padding: 0px;
+}
+
+.subblock:hover > h4,
+.subblock ul li:hover b,
+.subblock ol li:hover .itemname,
+.block ul li:hover .itemname{
+    background-position: -99.9% 0;
+    padding: 0px 0.25em 0px 0.25em;
+}
+
+#resume ul {
+    list-style: none;
+    padding: 0px;
+}
+
+#resume ul li, #resume ol li {
+    padding: 2px;
+}
+
+/* #resume ol {
+    list-style-type: none;
+    counter-reset: subcounter;
+} */
+/*
+#resume ol li::before {
+    content: counter(subcounter) ". ";
+    counter-increment: subcounter;
+} */
+
+/* Refer to https://github.com/doda-zz/github-language-colors/blob/master/colors.json */
+
+#resume .subblock > ul li::before {
+    content: "● ";
+    margin: 0em 0.25em;
+}
+li[class="cpp"]::before             { color: #f34b7d; }
+li[class="visual-basic"]::before    { color: #945db7; }
+li[class="tex"]::before             { color: #3D6117; }
+li[class="python"]::before          { color: #3572A5; }
+li[class="html"]::before            { color: #e44b23; }
+li[class="java"]::before            { color: #b07219; }
+li[class="rust"]::before            { color: #dea584; }
+li[class="shell"]::before           { color: #89e051; }
+li[class="git"]::before             { color: gray; }
