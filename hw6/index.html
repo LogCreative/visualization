@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/d3@7.3.0/dist/d3.min.js"></script>
+    <title>Hotel</title>
+</head>
+<style>
+    #chart {
+        display: inline-block;
+        border: 1px solid gray;
+        margin: 10px 0px;
+    }
+
+    #title {
+        font-size: large;
+        font-weight: bold;
+        margin: 5px;
+    }
+
+    .info {
+        color: gray;
+        font-size: small;
+    }
+
+    table {
+        border-collapse: collapse;
+        border-spacing: 0px;
+        font-size: small;
+    }
+
+    td, th {
+        border-bottom: 1px solid blueviolet;
+        padding: 5px 10px;
+    }
+
+    td div, th div {
+        padding: 3px;
+    }
+
+    input {
+        width: 6em;
+    }
+
+    th {
+        color: blueviolet;
+    }
+
+    tr:hover {
+        background-color: rgba(137, 43, 226, 0.1);
+    }
+
+    [class^="cell"] {
+        box-sizing: border-box;
+    }
+    td:nth-child(1) {
+        font-weight: bold;
+    }
+    .dis {
+        text-align: right;
+        border: 2px solid transparent;
+        border-radius: 4px;
+    }
+    .dis:hover {
+        cursor: pointer;
+        border-color: rgb(12, 12, 190);
+    }
+    .cellMod {
+        display: none;
+    }
+    .cellDel {
+        color: blue;
+    }
+    .cellDel:hover, button:hover, .cellColSelect:hover {
+        cursor: pointer;
+    }
+    .cellColSelect:hover{
+        background-color: rgba(0, 0, 139, 0.1);
+    }
+    .cellColSelected {
+        background-color: rgba(0, 0, 139, 0.15);
+    }
+</style>
+</style>
+<body>
+    <button onclick="addRow()">添加行</button><button onclick="saveData()">保存文件</button>
+    <p class="info">第一列自动生成，不会存入文件。点击单元格可以修改，按回车提交修改。</p>
+    <div id="chart">
+        <div id="title"></div>
+    </div>
+    <table id="tableHotelData"></table>
+    <script src="display.js"></script>
+</body>
+</html>
