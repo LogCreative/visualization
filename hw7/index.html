@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualize Hotel</title>
+    <script src="https://cdn.jsdelivr.net/npm/d3@7.3.0/dist/d3.min.js"></script>
+</head>
+<body>
+    <style>
+        #month {
+            display: block;
+        }
+        #reserv, #geo, #age{
+            display: inline-block;
+        }
+    </style>
+    Month <input id="month" type="number" min="1">
+    <div id="reserv"><h3>Customer Components</h3></div>
+    <div id="geo"><h3>Homeland Geographical Distribution</h3></div>
+    <div id="age"><h3>Age Distribution Histogram</h3></div>
+    <script src="visual.js"></script>
+</body>
+</html>
