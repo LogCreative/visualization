@@ -1,0 +1,25 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+html,body{
+    height: 100%;
+}
+
+#left, #right {
+    border: 2px solid black;
+    box-sizing: border-box;
+}
+
+#left {
+    float: left;
+    width: 45%;
+    height: 100%;
+}
+
+#right {
+    float: right;
+    width: 55%;
+    height: 100%;
+}
