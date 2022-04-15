@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Analysis</title>
+    <script src="https://cdn.jsdelivr.net/npm/d3@7.3.0/dist/d3.min.js"></script>
+</head>
+<body>
+    <style>
+        .container div, .container h3, #para, #season, #legend {
+            display: inline;
+        }
+        #home polygon {
+            fill: transparent;
+        }
+        .container {
+            display: inline-flex;
+            flex-direction: column;
+        }
+        #chara {
+            float: right;
+        }
+        h4 {
+            color: gray;
+            font-weight: normal;
+            font-size: small;
+            margin: 0px;
+        }
+    </style>
+    <div style="display: inline-flex;">
+        <div style="display: inline-flex; flex-direction: column;">
+            <div class="container">
+                <h3>occupancy</h3>
+                <h4>该区域可以调整滑块以筛选对应月份的数据。</h4>
+                <div id="brush"></div>
+            </div>
+            <div style="display: inline-flex; flex-direction: row;">
+                <div class="container">
+                    <h3>Seasonal</h3>
+                    <div id="season"></div>
+                </div>
+                <div class="container">
+                    <h3>Legend</h3>
+                    <div id="legend"></div>
+                    <h4 style="max-width: 200px;">该区域可以悬浮于某个图例上展示高亮该因素的趋势，并在下方平行图上展示。</h4>
+                </div>
+            </div>
+        </div>
+        <div id="chara">
+            <div>
+                <div class="container">
+                    <h3>Gender</h3>
+                    <div id="female"></div>
+                </div>
+                <div class="container">
+                    <h3>Group</h3>
+                    <div id="busi"></div>
+                </div>
+                <div class="container">
+                    <h3>Reservation</h3>
+                    <div id="reserv"></div>
+                </div>
+            </div>
+            <div>
+                <div class="container">
+                    <h3>Area</h3>
+                    <div id="home"></div>
+                </div>
+                <div class="container">
+                    <h3>Age</h3>
+                    <div id="age"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <h3>Parallel</h3>
+        <div id="para"></div>
+    </div>
+    <script src="comp/Sender.js"></script>
+    <script src="comp/Subscriber.js"></script>
+    <script src="comp/MonthBrush.js"></script>
+    <script src="comp/PieChart.js"></script>
+    <script src="comp/RadarChart.js"></script>
+    <script src="comp/Histogram.js"></script>
+    <script src="comp/SeasonChart.js"></script>
+    <script src="comp/Parallel.js"></script>
+    <script src="comp/Legend.js"></script>
+    <script src="interact.js"></script>
+</body>
+</html>
